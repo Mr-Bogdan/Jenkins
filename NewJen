@@ -4,14 +4,13 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-				touch folder.py
-				echo "import os" >> folder.py
-				echo "fld = '/marti'" >> folder.py
-				echo "os.mkdir"(fld) >> folder.py
-				echo "print('Folder is created!')" >> folder.py
+		echo "import os" >> folder.py
+		echo "fld = '/marti'" >> folder.py
+		echo "os.mkdir"(fld) >> folder.py
+		echo "print('Folder is created!')" >> folder.py
             }
         }
-		stage('run') {
+	stage('run') {
             steps {
                 sh 'ls'
             }
