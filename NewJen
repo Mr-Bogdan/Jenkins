@@ -1,0 +1,20 @@
+pipeline {
+    agent { docker { image 'python:3.5.1' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+				touch folder.py
+				echo "import os" >> folder.py
+				echo "fld = "/marti"> > folder.py
+				echo "os.mkdir"(fld) >> folder.py
+				echo "print("Folder is created!")" > folder.py>> folder.py
+            }
+        }
+		stage('run') {
+            steps {
+                sh 'ls'
+            }
+        }
+    }
+}
