@@ -8,7 +8,7 @@ pipeline {
 				echo "import os" >> folder.py
 				echo "fld = '/marti'" >> folder.py
 				echo "os.mkdir"(fld) >> folder.py
-				echo "print("Folder is created!")" > folder.py>> folder.py
+				echo "print('Folder is created!')" >> folder.py
             }
         }
 		stage('run') {
